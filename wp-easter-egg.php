@@ -32,6 +32,8 @@ class WP_Easter_Egg {
 	public static $url  = '';
 	public static $path = '';
 	public static $name = '';
+	
+	private static $options = array();
 
 	/**
 	 * Sets up our plugin
@@ -44,13 +46,13 @@ class WP_Easter_Egg {
 		self::$name = __( 'WP Easter Egg', 'wp_easter_egg' );
 		
 		// Set the options
-		$this->options = get_option( 'wp_easter_egg_settings' );
+		self::$options = get_option( 'wp_easter_egg_settings' );
 	}
 
 	public function hooks() {
 		add_action( 'init', array( $this, 'init' ) );
 
-		// Add whatever is in the metabox field to <head>
+		// Add JS to head
 		add_action( 'wp_head', array( $this, 'do_easter_egg' ), 1 );
 		
 		// Adds "Settings" link to the plugin action page
@@ -79,10 +81,10 @@ class WP_Easter_Egg {
 	
 	private function compile_js_data() {
 		$js_data = array(
-			'type' => $this->fetch_option( 'type' ),
-			'custom_code' => $this->fetch_option( 'custom_code' ),
-			'action' => $this->fetch_option( 'action' ),
-			'custom_js' => $this->fetch_option( 'custom_js' ),
+			'type' => self::fetch_option( 'type' ),
+			'custom_code' => self::fetch_option( 'custom_code' ),
+			'action' => self::fetch_option( 'action' ),
+			'custom_js' => self::fetch_option( 'custom_js' ),
 		);
 		
 		return $js_data;
@@ -97,15 +99,15 @@ class WP_Easter_Egg {
 	* @param  string $key Key to get from the wp_easter_egg_settings option array.
 	* @return string Returns the value of the key or false on failure.
 	*/
-	private function fetch_option( $key ) {
+	private static function fetch_option( $key ) {
 		// Are options already set?
-		if( empty( $this->options ) ) {
-			$this->options = get_option( 'wp_easter_egg_settings' );
+		if( empty( self::$options ) ) {
+			self::$options = get_option( 'wp_easter_egg_settings' );
 		}
 		
 		// Does the key exist?
-		if( isset( $this->options[$key] ) ) {
-			return $this->options[$key];
+		if( isset( self::$options[$key] ) ) {
+			return self::$options[$key];
 		}
 		
 		// If nothing has been returned yet, return false
@@ -176,15 +178,15 @@ class WP_Easter_Egg {
 	public function wp_easter_egg_type_render() {
 		?>
 		<select name='wp_easter_egg_settings[type]'>
-			<option value='konami' <?php selected( $this->fetch_option( 'type' ), 'konami' ); ?>>Konami</option>
-			<option value='custom' <?php selected( $this->fetch_option( 'type' ), 'custom' ); ?>>Custom</option>
+			<option value='konami' <?php selected( self::fetch_option( 'type' ), 'konami' ); ?>>Konami</option>
+			<option value='custom' <?php selected( self::fetch_option( 'type' ), 'custom' ); ?>>Custom</option>
 		</select>
 		<?php
 	}
 	
 	public function wp_easter_egg_custom_code_render() {
 		?>
-		<input type='text' name='wp_easter_egg_settings[custom_code]' value='<?php echo $this->fetch_option( 'custom_code' ); ?>'>
+		<input type='text' name='wp_easter_egg_settings[custom_code]' value='<?php echo self::fetch_option( 'custom_code' ); ?>'>
 		<p><label for="wp_easter_egg_settings[custom_code]">Example: 38,38,40,40,37,39,37,39,66,65</label></p>
 		<?php
 	}
@@ -192,15 +194,15 @@ class WP_Easter_Egg {
 	public function wp_easter_egg_action_render() {
 		?>	
 		<select name='wp_easter_egg_settings[action]'>
-			<option value='rotate_screen' <?php selected( $this->fetch_option( 'action' ), 'rotate_screen' ); ?>>Rotate Screen</option>
-			<option value='custom_js' <?php selected( $this->fetch_option( 'action' ), 'custom_js' ); ?>>Custom JS</option>
+			<option value='rotate_screen' <?php selected( self::fetch_option( 'action' ), 'rotate_screen' ); ?>>Rotate Screen</option>
+			<option value='custom_js' <?php selected( self::fetch_option( 'action' ), 'custom_js' ); ?>>Custom JS</option>
 		</select>
 		<?php
 	}
 	
 	public function wp_easter_egg_custom_js_render() { 
 		?>
-		<textarea cols='40' rows='5' name='wp_easter_egg_settings[custom_js]'><?php echo $this->fetch_option( 'custom_js' ); ?></textarea>
+		<textarea cols='40' rows='5' name='wp_easter_egg_settings[custom_js]'><?php echo self::fetch_option( 'custom_js' ); ?></textarea>
 	 	<p><label for="wp_easter_egg_settings[custom_js]">WARNING: this could be dangerous to your site</label></p>
 		<?php
 	
@@ -223,8 +225,9 @@ class WP_Easter_Egg {
 		<?php
 	}
 }
-endif;
 
 // init our class
 $wp_easter_egg = new WP_Easter_Egg();
 $wp_easter_egg->hooks();
+
+endif;
