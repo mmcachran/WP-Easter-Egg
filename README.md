@@ -2,7 +2,7 @@
 Contributors: mmcachran
 Tags: easteregg
 Requires at least: 3.8
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk
 
 Easily add Easter Eggs to your WordPress site using the Konami code or a custom key sequence.
