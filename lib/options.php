@@ -17,7 +17,7 @@ class WP_Easter_Egg_Options {
 		// only add the js on the WPEE admin page
 		if( is_admin() && isset( $_GET['page'] ) && $_GET['page'] === 'wp_easter_egg_plugin' ) {
 			wp_enqueue_media();
-			wp_enqueue_script( 'wp-easter-egg-admin', plugins_url( '/wp-easter-egg-admin.js', __FILE__ ), array( 'jquery', 'backbone' ) );
+			wp_enqueue_script( 'wp-easter-egg-admin', plugins_url( '/wp-easter-egg-admin.js', __FILE__ ), array( 'jquery' ) );
 		}
 		
 		add_settings_section(
