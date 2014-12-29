@@ -90,6 +90,7 @@ class WP_Easter_Egg_Options {
 		<select name='wp_easter_egg_settings[action]'>
 			<option value='rotate_screen' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'rotate_screen' ); ?>>Rotate Screen</option>
 			<option value='cornify' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'cornify' ); ?>>Cornify</option>
+			<option value='move_image_across_bottom' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'move_image_across_bottom' ); ?>>Move Image Across Bottom of Screen</option>
 			<option value='custom_js' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'custom_js' ); ?>>Custom JS</option>
 		</select>
 		<?php

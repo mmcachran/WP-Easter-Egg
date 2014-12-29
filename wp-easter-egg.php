@@ -95,6 +95,7 @@ class WP_Easter_Egg {
 			'custom_code' => self::fetch_option( 'custom_code' ),
 			'action' => self::fetch_option( 'action' ),
 			'custom_js' => self::fetch_option( 'custom_js' ),
+			'image' => self::fetch_option( 'image' ),
 		);
 		
 		return $js_data;
