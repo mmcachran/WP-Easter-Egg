@@ -61,7 +61,7 @@ class WP_Easter_Egg_Options {
 		
 		add_settings_field( 
 			'wp_easter_egg_image_render', 
-			__( 'Custom JS', 'wp_easter_egg' ), 
+			__( 'Image', 'wp_easter_egg' ), 
 			array( $this, 'wp_easter_egg_image_render' ), 
 			'WP_Easter_Egg_settingsPage', 
 			'wp_easter_egg_settingsPage_section' 
