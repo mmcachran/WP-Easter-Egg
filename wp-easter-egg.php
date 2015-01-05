@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Easter Egg
  * Description: Add an Easter Egg to your site
- * Version:     0.2.0
+ * Version:     0.3.0
  * Author:      mmcachran
  * License:     GPLv2+
  * Text Domain: wp_easter_egg
@@ -82,9 +82,13 @@ class WP_Easter_Egg {
 	}
 
 	/**
-	 * Output content from metabox defined above
+	 * Add JS to head
 	 */
 	public function do_easter_egg() {
+		if( 'raptorize' === self::fetch_option( 'action' ) ) {
+			wp_enqueue_script( 'raptorize', plugins_url( '/lib/raptorize/jquery.raptorize.1.0.js', __FILE__ ), array( 'jquery' ) );
+		}
+		
 		wp_enqueue_script( 'wp-easter-egg', plugins_url( '/wp-easter-egg.js', __FILE__ ), array( 'jquery' ) );
 		wp_localize_script( 'wp-easter-egg', 'wpee_config', $this->compile_js_data() );
 	}

@@ -17,6 +17,13 @@
 		});
 	};
 	
+	var raptorize = function() {
+		$( 'body' ).raptorize({
+				'delayTime' : 1000,
+				'enterOn' : 'do-it'
+		});
+	};
+	
 	var moveImageAcrossBottom = function() {
 		console.log( wpee_config.image );
 		if( wpee_config.image && wpee_config.image !== '' ) {
@@ -59,6 +66,10 @@
 						
 					case 'cornify':
 						cornify();
+						break;
+						
+					case 'raptorize':
+						raptorize();
 						break;
 					
 					case 'move_image_across_bottom':
