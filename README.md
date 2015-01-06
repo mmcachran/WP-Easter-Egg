@@ -10,6 +10,7 @@ Easily add Easter Eggs to your WordPress site using the Konami code or a custom 
 == Description ==
 
 Currently includes options for:
+
 * Cornify (cornify.com)
 * Raptorize (zurb.com/playground/jquery-raptorize)
 * Rotate the user's screen
