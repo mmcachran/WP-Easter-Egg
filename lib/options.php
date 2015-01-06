@@ -28,6 +28,14 @@ class WP_Easter_Egg_Options {
 		);
 		
 		add_settings_field( 
+			'wp_easter_egg_filter_render', 
+			__( 'Easter Egg Filter', 'wp_easter_egg' ), 
+			array( $this, 'wp_easter_egg_filter_render' ), 
+			'WP_Easter_Egg_settingsPage', 
+			'wp_easter_egg_settingsPage_section' 
+		);
+		
+		add_settings_field( 
 			'wp_easter_egg_type_render', 
 			__( 'Easter Egg Type', 'wp_easter_egg' ), 
 			array( $this, 'wp_easter_egg_type_render' ), 
@@ -112,7 +120,16 @@ class WP_Easter_Egg_Options {
 			<p><img id="image_preview" src="" style="display: none; max-height: 250px; max-width: 250px;" /></p>
 		</div>
 		<?php
-	}	
+	}
+	
+	public function wp_easter_egg_filter_render() {
+		?>
+		<select name='wp_easter_egg_settings[filter]'>
+			<option value='exclusive' <?php selected( WP_Easter_Egg::fetch_option( 'filter' ), 'exclusive' ); ?>>Exclusive</option>
+			<option value='inclusive' <?php selected( WP_Easter_Egg::fetch_option( 'filter' ), 'inclusive' ); ?>>Inclusive</option>
+		</select>
+		<?php
+	}
 
 	public function wp_easter_egg_settings_section_callback() {
 		echo __( '', 'wp_easter_egg' );

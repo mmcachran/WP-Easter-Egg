@@ -9,7 +9,14 @@ Easily add Easter Eggs to your WordPress site using the Konami code or a custom 
 
 == Description ==
 
-Currently includes options for Cornify JS, Raptorize JS, rotating the user's screen, moving an image across the user's screen, and firing user defined JS.
+Currently includes options for:
+* Cornify (cornify.com)
+* Raptorize (zurb.com/playground/jquery-raptorize)
+* Rotate the user's screen
+* Move an image across the user's screen
+* Fire user defined JS
+
+The filter settings can be configured in the plugin's settings and will either be inclusive or exclusive.  If the filter is exclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is checked.  If the filter is inclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is not checked.
 
 == Installation ==
 
@@ -20,6 +27,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 After activation, you should see a new option in your "Settings" menu for "WP Easter Egg" where you can configure this plugin's settings.
 
 == Changelog ==
+
+= 0.4.0 =
+* Adding inclusive/exclusive filter options for posts
 
 = 0.3.0 =
 * Add option for raptorize JS

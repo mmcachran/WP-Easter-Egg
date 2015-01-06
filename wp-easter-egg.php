@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Easter Egg
  * Description: Add an Easter Egg to your site
- * Version:     0.3.0
+ * Version:     0.4.0
  * Author:      mmcachran
  * License:     GPLv2+
  * Text Domain: wp_easter_egg
@@ -28,7 +28,7 @@
 if( ! class_exists( 'WP_Easter_Egg' ) ):
 class WP_Easter_Egg {
 
-	const VERSION = '0.1.0';
+	const VERSION = '0.4.0';
 	public static $url  = '';
 	public static $path = '';
 	public static $name = '';
@@ -56,9 +56,22 @@ class WP_Easter_Egg {
 		add_action( 'wp_head', array( $this, 'do_easter_egg' ), 1 );
 		
 		// Options
-		// Adds "Settings" link to the plugin action page
 		add_action( 'admin_menu', array( $this->settings(), 'add_admin_menu' ) );
 		add_action( 'admin_init', array( $this->settings(), 'settings_init' ) );
+		
+		// create meta box for posts
+		add_action( 'add_meta_boxes', array( $this->meta_box(), 'meta_box_add' ) );
+		add_action( 'save_post', array( $this->meta_box(), 'meta_box_save' ) );
+	}
+	
+	public function meta_box() {
+		if ( isset( $this->meta_box ) ) {
+			return $this->meta_box;
+		}
+		
+		require_once( 'lib/meta-box.php' );
+		$this->meta_box = new WPEE_Meta_Box( $this );
+		return $this->meta_box;
 	}
 	
 	public function settings() {
@@ -85,12 +98,36 @@ class WP_Easter_Egg {
 	 * Add JS to head
 	 */
 	public function do_easter_egg() {
-		if( 'raptorize' === self::fetch_option( 'action' ) ) {
-			wp_enqueue_script( 'raptorize', plugins_url( '/lib/raptorize/jquery.raptorize.1.0.js', __FILE__ ), array( 'jquery' ) );
+		if ( $this->is_allowed_on_post() ) {
+			if( 'raptorize' === self::fetch_option( 'action' ) ) {
+				wp_enqueue_script( 'raptorize', plugins_url( '/lib/raptorize/jquery.raptorize.1.0.js', __FILE__ ), array( 'jquery' ) );
+			}
+			
+			wp_enqueue_script( 'wp-easter-egg', plugins_url( '/wp-easter-egg.js', __FILE__ ), array( 'jquery' ) );
+			wp_localize_script( 'wp-easter-egg', 'wpee_config', $this->compile_js_data() );
+		}
+	}
+	
+	private function is_allowed_on_post() {
+		global $post;
+		
+		$is_added = 'on' === get_post_meta( $post->ID, '_wpee_added_to_filter', true ) ? true : false;
+		$filter = self::fetch_option( 'filter' );
+		
+		// fallback if null
+		if ( ! $filter ) {
+			$filter = 'exclusive';
 		}
 		
-		wp_enqueue_script( 'wp-easter-egg', plugins_url( '/wp-easter-egg.js', __FILE__ ), array( 'jquery' ) );
-		wp_localize_script( 'wp-easter-egg', 'wpee_config', $this->compile_js_data() );
+		// Is WPEE allowed on this post?
+		if ( 
+			( 'exclusive' === $filter && ! $is_added )
+			|| ( 'inclusive' === $filter && $is_added )
+		) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	private function compile_js_data() {
