@@ -125,6 +125,7 @@ class WP_Easter_Egg_Options {
 	public function wp_easter_egg_filter_render() {
 		?>
 		<select name='wp_easter_egg_settings[filter]'>
+			<option value='off' <?php selected( WP_Easter_Egg::fetch_option( 'filter' ), 'off' ); ?>>Off</option>
 			<option value='exclusive' <?php selected( WP_Easter_Egg::fetch_option( 'filter' ), 'exclusive' ); ?>>Exclusive</option>
 			<option value='inclusive' <?php selected( WP_Easter_Egg::fetch_option( 'filter' ), 'inclusive' ); ?>>Inclusive</option>
 		</select>

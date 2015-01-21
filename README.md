@@ -29,6 +29,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 0.5.0 =
+* Add option to turn filter off
+
 = 0.4.0 =
 * Adding inclusive/exclusive filter options for posts
 
