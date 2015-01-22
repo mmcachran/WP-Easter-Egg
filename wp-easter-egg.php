@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Easter Egg
  * Description: Add an Easter Egg to your site
- * Version:     0.5.0
+ * Version:     0.6.0
  * Author:      mmcachran
  * License:     GPLv2+
  * Text Domain: wp_easter_egg
@@ -28,7 +28,7 @@
 if( ! class_exists( 'WP_Easter_Egg' ) ):
 class WP_Easter_Egg {
 
-	const VERSION = '0.4.0';
+	const VERSION = '0.6.0';
 	public static $url  = '';
 	public static $path = '';
 	public static $name = '';
@@ -60,7 +60,7 @@ class WP_Easter_Egg {
 		add_action( 'admin_init', array( $this->settings(), 'settings_init' ) );
 		
 		// create meta box for posts
-		if ( 'off' !==  self::fetch_option( 'filter' ) ) {
+		if ( 'off' !==  self::fetch_option( 'filter' )  && false != self::fetch_option( 'filter' ) ) {
 			add_action( 'add_meta_boxes', array( $this->meta_box(), 'meta_box_add' ) );
 			add_action( 'save_post', array( $this->meta_box(), 'meta_box_save' ) );
 		}
@@ -113,7 +113,7 @@ class WP_Easter_Egg {
 	private function is_allowed_on_post() {
 		global $post;
 		
-		if ( 'off' === self::fetch_option( 'filter' ) ) {
+		if ( ! self::fetch_option( 'filter' ) || 'off' === self::fetch_option( 'filter' ) ) {
 			return true;
 		}
 		
