@@ -14,7 +14,7 @@ Currently includes options for:
 * Cornify (cornify.com)
 * Raptorize (zurb.com/playground/jquery-raptorize)
 * Rotate the user's screen
-* Move an image across the user's screen
+* Move an image across the user's screen (bottom, middle, or top)
 * Fire user defined JS
 
 The filter settings can be configured in the plugin's settings and will either be inclusive or exclusive.  If the filter is exclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is checked.  If the filter is inclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is not checked.
@@ -28,6 +28,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 After activation, you should see a new option in your "Settings" menu for "WP Easter Egg" where you can configure this plugin's settings.
 
 == Changelog ==
+
+= 0.7.0 =
+* Add new options for moving image across a user's screen
 
 = 0.6.0 =
 * Cleanup filtering option

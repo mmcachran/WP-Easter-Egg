@@ -45,7 +45,62 @@
 		  });
 		}
 	};
-	
+
+	var moveImageAcrossMiddle = function() {
+		console.log( wpee_config.image );
+		if( wpee_config.image && wpee_config.image !== '' ) {
+			var width = "+=" + $(document).width();
+
+			var window_width = Math.max( document.documentElement.clientWidth, window.innerWidth || 0 );
+			var window_height = Math.max( document.documentElement.clientHeight, window.innerHeight || 0 );
+
+			var wpee_image = $( '<img />' )
+				.attr( 'src', wpee_config.image )
+				.css({
+					position: 'absolute',
+					width: '250px',
+					height: '250px',
+					left: '50%',
+					top: '50%'
+				})
+				.appendTo( 'body' )
+				.animate({
+					left: width
+				}, 5000, function() {
+					// remove image when animation is complete
+					wpee_image.remove();
+		  });
+		}
+	};
+
+	var moveImageAcrossTop = function() {
+		console.log( wpee_config.image );
+		if( wpee_config.image && wpee_config.image !== '' ) {
+			var width = "+=" + $(document).width();
+
+			var window_width = Math.max( document.documentElement.clientWidth, window.innerWidth || 0 );
+			var window_height = Math.max( document.documentElement.clientHeight, window.innerHeight || 0 );
+
+			var wpee_image = $( '<img />' )
+				.attr( 'src', wpee_config.image )
+				.css({
+					position: 'absolute',
+					width: '250px',
+					height: '250px',
+					left: '50%',
+					top: '50%',
+					'margin-left': -( window_width / 2 ) + 'px',
+					'margin-top': -( window_height / 2 ) + 'px',
+				})
+				.appendTo( 'body' )
+				.animate({
+					left: width
+				}, 5000, function() {
+					// remove image when animation is complete
+					wpee_image.remove();
+		  });
+		}
+	};		
 	// check to make sure that the browser can handle window.addEventListener
 	if( window.addEventListener ) {
 		// create the keys array and default to konami code unless custom code is given
@@ -76,6 +131,14 @@
 						moveImageAcrossBottom();
 						break;
 					
+					case 'move_image_across_middle':
+						moveImageAcrossMiddle();
+						break;
+
+					case 'move_image_across_top':
+						moveImageAcrossTop());
+						break;
+																	
 					case 'custom_js':
 						eval(wpee_config.custom_js);
 						break;

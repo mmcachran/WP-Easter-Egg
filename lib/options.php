@@ -100,6 +100,8 @@ class WP_Easter_Egg_Options {
 			<option value='cornify' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'cornify' ); ?>>Cornify</option>
 			<option value='raptorize' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'raptorize' ); ?>>Raptorize</option>
 			<option value='move_image_across_bottom' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'move_image_across_bottom' ); ?>>Move Image Across Bottom of Screen</option>
+			<option value='move_image_across_middle' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'move_image_across_middle' ); ?>>Move Image Across Middle of Screen</option>
+			<option value='move_image_across_top' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'move_image_across_top' ); ?>>Move Image Across Top of Screen</option>
 			<option value='custom_js' <?php selected( WP_Easter_Egg::fetch_option( 'action' ), 'custom_js' ); ?>>Custom JS</option>
 		</select>
 		<?php
