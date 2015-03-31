@@ -28,13 +28,15 @@
 		console.log( wpee_config.image );
 		if( wpee_config.image && wpee_config.image !== '' ) {
 			var width = "+=" + $(document).width();
+			var window_height = Math.max( document.documentElement.clientHeight, window.innerHeight || 0 );
+
 			var wpee_image = $( '<img />' )
 				.attr( 'src', wpee_config.image )
 				.css({
-					position: 'relative',
+					position: 'absolute',
 					width: '250px',
 					height: '250px',
-					bottom: '250px'
+					bottom: '5px'
 				})
 				.appendTo( 'body' )
 				.animate({
