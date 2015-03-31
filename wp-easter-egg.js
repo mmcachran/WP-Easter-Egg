@@ -136,7 +136,7 @@
 						break;
 
 					case 'move_image_across_top':
-						moveImageAcrossTop());
+						moveImageAcrossTop();
 						break;
 																	
 					case 'custom_js':
