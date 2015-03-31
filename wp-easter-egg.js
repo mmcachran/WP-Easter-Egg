@@ -25,7 +25,6 @@
 	};
 	
 	var moveImageAcrossBottom = function() {
-		console.log( wpee_config.image );
 		if( wpee_config.image && wpee_config.image !== '' ) {
 			var width = "+=" + $(document).width();
 			var window_height = Math.max( document.documentElement.clientHeight, window.innerHeight || 0 );

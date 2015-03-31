@@ -29,6 +29,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 0.8.0 =
+* Fix css for image scrolling across user's screen
+
 = 0.7.0 =
 * Add new options for moving image across a user's screen
 
