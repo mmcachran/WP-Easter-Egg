@@ -29,6 +29,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 0.9.0 =
+* Fix logic in filter
+
 = 0.8.0 =
 * Fix css for image scrolling across user's screen
 
