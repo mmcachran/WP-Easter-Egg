@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Easter Egg
  * Description: Add an Easter Egg to your site
- * Version:     0.9.0
+ * Version:     1.0.0
  * Author:      mmcachran
  * License:     GPLv2+
  * Text Domain: wp_easter_egg
@@ -28,7 +28,7 @@
 if( ! class_exists( 'WP_Easter_Egg' ) ):
 class WP_Easter_Egg {
 
-	const VERSION = '0.9.0';
+	const VERSION = '1.0.0';
 	public static $url  = '';
 	public static $path = '';
 	public static $name = '';

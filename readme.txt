@@ -17,6 +17,8 @@ Currently includes options for:
 * Move an image across the user's screen (bottom, middle, or top)
 * Fire user defined JS
 
+If you have the "Activate keycode helper" checked, the custom keycode will fill based on the JS keyCode.  
+
 The filter settings can be configured in the plugin's settings and will either be inclusive or exclusive.  If the filter is exclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is checked.  If the filter is inclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is not checked.
 
 == Installation ==
@@ -28,6 +30,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 After activation, you should see a new option in your "Settings" menu for "WP Easter Egg" where you can configure this plugin's settings.
 
 == Changelog ==
+
+= 1.0.0 =
+* Add JS keyCode helper for custom codes
 
 = 0.9.0 =
 * Fix logic in filter

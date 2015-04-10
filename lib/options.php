@@ -88,7 +88,7 @@ class WP_Easter_Egg_Options {
 	
 	public function wp_easter_egg_custom_code_render() {
 		?>
-		<input type='text' name='wp_easter_egg_settings[custom_code]' value='<?php echo WP_Easter_Egg::fetch_option( 'custom_code' ); ?>'>
+		<input type='text' name='wp_easter_egg_settings[custom_code]' value='<?php echo WP_Easter_Egg::fetch_option( 'custom_code' ); ?>'> &nbsp; &nbsp; <input type="checkbox" id="keycode-helper" />&nbsp; Activate keycode helper
 		<p><label for="wp_easter_egg_settings[custom_code]">Example: 38,38,40,40,37,39,37,39,66,65</label></p>
 		<?php
 	}
