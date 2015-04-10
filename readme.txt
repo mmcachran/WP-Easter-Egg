@@ -17,7 +17,7 @@ Currently includes options for:
 * Move an image across the user's screen (bottom, middle, or top)
 * Fire user defined JS
 
-If you have the "Activate keycode helper" checked, the custom keycode will fill based on the JS keyCode.  
+If you have the "Activate keycode helper" checkbox checked, the custom keycode will fill based on the JS keyCode.  
 
 The filter settings can be configured in the plugin's settings and will either be inclusive or exclusive.  If the filter is exclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is checked.  If the filter is inclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is not checked.
 
