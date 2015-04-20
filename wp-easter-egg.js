@@ -33,8 +33,8 @@
 				.attr( 'src', wpee_config.image )
 				.css({
 					position: 'absolute',
-					width: '250px',
-					height: '250px',
+					//width: '250px',
+					//height: '250px',
 					bottom: '5px'
 				})
 				.appendTo( 'body' )
@@ -59,8 +59,8 @@
 				.attr( 'src', wpee_config.image )
 				.css({
 					position: 'absolute',
-					width: '250px',
-					height: '250px',
+					//width: '250px',
+					//height: '250px',
 					left: '50%',
 					top: '50%'
 				})

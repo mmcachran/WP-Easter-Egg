@@ -31,6 +31,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 1.0.2 =
+* Remove image width/height in JS (allow images to be shown in the size uploaded)
+
 = 1.0.1 =
 * Cleanup
 
