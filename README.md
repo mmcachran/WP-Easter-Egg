@@ -31,6 +31,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 1.0.1 =
+* Cleanup
+
 = 1.0.0 =
 * Add JS keyCode helper for custom codes
 
