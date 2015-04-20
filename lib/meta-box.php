@@ -36,8 +36,7 @@ class WPEE_Meta_Box {
 		if( ! isset( $_POST['meta_box_nonce'] ) || ! wp_verify_nonce( $_POST['meta_box_nonce'], 'wpee_meta_box_nonce' ) ) {
 		    return;
 		}
-		   
-	     
+
 		// bail if our current user can't edit this post
 		if( ! current_user_can( 'edit_post' ) ) {
 			return;

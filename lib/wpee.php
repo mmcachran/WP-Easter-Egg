@@ -1,7 +1,7 @@
 <?php
 class WP_Easter_Egg {
 
-	const VERSION = '1.0.4';
+	const VERSION = '1.0.5';
 
 	/**
 	 * Helper vars
@@ -71,7 +71,7 @@ class WP_Easter_Egg {
 		add_action( 'admin_init', array( $this->settings(), 'settings_init' ) );
 		
 		// create meta box for posts
-		if ( 'off' !==  self::fetch_option( 'filter' )  && false != self::fetch_option( 'filter' ) ) {
+		if ( 'off' !==  self::fetch_option( 'filter' ) && false != self::fetch_option( 'filter' ) ) {
 			add_action( 'add_meta_boxes', array( $this->meta_box(), 'meta_box_add' ) );
 			add_action( 'save_post', array( $this->meta_box(), 'meta_box_save' ) );
 		}

@@ -31,6 +31,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 1.0.5 =
+* Cleanup
+
 = 1.0.4 =
 * Fix raptorize.js
 
