@@ -1,7 +1,7 @@
 <?php
 class WP_Easter_Egg {
 
-	const VERSION = '1.0.3';
+	const VERSION = '1.0.4';
 
 	/**
 	 * Helper vars
@@ -113,7 +113,7 @@ class WP_Easter_Egg {
 	public function do_easter_egg() {
 		if ( $this->is_allowed_on_post() ) {
 			if( 'raptorize' === self::fetch_option( 'action' ) ) {
-				wp_enqueue_script( 'raptorize', plugins_url( '/lib/raptorize/jquery.raptorize.1.0.js', __FILE__ ), array( 'jquery' ) );
+				wp_enqueue_script( 'raptorize', self::$url .'raptorize/jquery.raptorize.1.0.js', array( 'jquery' ) );
 			}
 			
 			wp_enqueue_script( 'wp-easter-egg', self::$url . 'wp-easter-egg.js', array( 'jquery' ) );

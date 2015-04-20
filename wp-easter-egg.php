@@ -7,7 +7,7 @@
  * Plugin Name:       WP Easter Egg
  * Plugin URI:        
  * Description:       Add an Easter Egg to your site
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            mmcachran
  * Author URI:        http://webdevstudios.com
  * Text Domain:       previously-viewed-deals
