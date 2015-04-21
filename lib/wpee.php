@@ -1,7 +1,7 @@
 <?php
 class WP_Easter_Egg {
 
-	const VERSION = '1.0.5';
+	const VERSION = '1.0.6';
 
 	/**
 	 * Helper vars
@@ -48,6 +48,7 @@ class WP_Easter_Egg {
 
 		return self::$instance;
 	}
+	
 	/**
 	 * Sets up our plugin
 	 * @since  0.1.0
