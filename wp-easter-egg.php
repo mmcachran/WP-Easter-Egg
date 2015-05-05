@@ -7,7 +7,7 @@
  * Plugin Name:       WP Easter Egg
  * Plugin URI:        
  * Description:       Add an Easter Egg to your site
- * Version:           1.0.6
+ * Version:           1.0.7
  * Author:            mmcachran
  * Text Domain:       wp_easter_egg
  * License:           GPL-2.0+
@@ -20,7 +20,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'WP_EASTER_EGG_VERSION', '1.0.6' );
+define( 'WP_EASTER_EGG_VERSION', '1.0.7' );
 
 // Are we in DEV mode?
 if ( ! defined( 'WP_EASTER_EGG' ) ) {

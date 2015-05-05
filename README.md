@@ -31,6 +31,10 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 1.0.7 =
+* Fix JS error in media library on settings page
+* Add version when enqueueing scripts
+
 = 1.0.6 =
 * Text domain fix
 
