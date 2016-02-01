@@ -6,11 +6,11 @@ class WPEE_Meta_Box {
 	}
 	
 	public function meta_box_add() {
-		add_meta_box( 'wpee-meta-box', 'WP Easter Egg', array( $this, 'meta_box_cb' ), 'post', 'side', 'high' );
+		$allowed_on = apply_filters( 'wpee_allowed_on', array( 'post', 'page' ) );
+		add_meta_box( 'wpee-meta-box', 'WP Easter Egg', array( $this, 'meta_box_cb' ), $allowed_on, 'side', 'high' );
 	}
 	
 	public function meta_box_cb() {
-	    // $post is already set, and contains an object: the WordPress post
 	    global $post;
 	    $values = get_post_custom( $post->ID );
 	    $check = isset( $values['_wpee_added_to_filter'][0] ) ? esc_attr( $values['_wpee_added_to_filter'][0] ) : '';

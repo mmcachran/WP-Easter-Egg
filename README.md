@@ -31,6 +31,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 2.0.2 =
+* Add filter to allow on more than on post type (default: post and page)
+
 = 2.0.1 =
 * Cleanup admin JS
 
