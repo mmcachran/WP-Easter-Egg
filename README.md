@@ -15,7 +15,7 @@ Currently includes options for:
 * Raptorize (zurb.com/playground/jquery-raptorize)
 * Rotate the user's screen
 * Move an image across the user's screen (bottom, middle, or top)
-* Fire user defined JS
+* Fire custom JS
 
 If you have the "Activate keycode helper" checkbox checked, the custom keycode will fill based on the JS keyCode.  
 
