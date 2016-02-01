@@ -20,8 +20,8 @@ class WPEE_Meta_Box {
 	    ?>     
 	    <p>
 	        <input type="checkbox" id="_wpee_added_to_filter" name="_wpee_added_to_filter" <?php checked( $check, 'on' ); ?> />
-	        <label for="_wpee_added_to_filter">Add to filter?</label>
-	        <p><small>inclusive or exclusive based on what is chosen in the plugin's settings. (default: exclusive)</small></p>
+	        <label for="_wpee_added_to_filter"><?php _e( 'Add to filter?', 'wp_easter_egg' ); ?></label>
+	        <p><small><?php echo $this->filter_label(); ?></small></p>
 	    </p>
 	    <?php  
 	}
@@ -45,6 +45,26 @@ class WPEE_Meta_Box {
 		// save the post meta
 		$chk = isset( $_POST['_wpee_added_to_filter'] ) && $_POST['_wpee_added_to_filter'] ? 'on' : 'off';
 		update_post_meta( $post_id, '_wpee_added_to_filter', $chk );
+	}
+
+	public function filter_label() {
+		if ( ! isset( $_GET['post'] ) && ! isset( $_GET['post_type'] ) ) {
+			$label = __( 'Post' );
+		} else {
+			$pt = isset( $_GET['post_type'] ) ? $_GET['post_type'] : get_post_type( $_GET['post'] );
+			$pt_object = get_post_type_object( $pt );
+			$label = $pt_object->labels->singular_name;
+		}
+
+		switch ( wp_easter_egg()->fetch_option( 'filter_type' ) ) {
+			case 'inclusive':
+				$label = sprintf( __( 'Allow Easter Egg on this %s', 'wp_easter_egg' ), $label );
+				break;
+			default:
+				$label = sprintf( __( 'Do NOT allow Easter Egg on this %s', 'wp_easter_egg' ), $label );
+				break;
+		}
+		return $label;
 	}
 }
 endif;

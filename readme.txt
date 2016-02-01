@@ -19,7 +19,7 @@ Currently includes options for:
 
 If you have the "Activate keycode helper" checkbox checked, the custom keycode will fill based on the JS keyCode.  
 
-The filter settings can be configured in the plugin's settings and will either be inclusive or exclusive.  If the filter is exclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is checked.  If the filter is inclusive, the easter egg will not available on posts where the "Add to filter?" meta checkbox is not checked.
+The filter can be configured to be allowed or not allowed on certain pages via the settings page.
 
 == Installation ==
 
@@ -30,6 +30,9 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 After activation, you should see a new option in your "Settings" menu for "WP Easter Egg" where you can configure this plugin's settings.
 
 == Changelog ==
+
+= 2.0.3 =
+* Update filter description
 
 = 2.0.2 =
 * Add filter to allow on more than on post type (default: post and page)
