@@ -1,8 +1,5 @@
 <?php
 class WP_Easter_Egg {
-
-	const VERSION = '1.0.7';
-
 	/**
 	 * Helper vars
 	 *
@@ -118,16 +115,17 @@ class WP_Easter_Egg {
 		}
 			
 		if( 'raptorize' === self::fetch_option( 'action' ) ) {
-			wp_enqueue_script( 'raptorize', self::$url .'raptorize/jquery.raptorize.1.0.js', array( 'jquery' ), self::VERSION, true );
+			wp_enqueue_script( 'raptorize', self::$url .'raptorize/jquery.raptorize.1.0.js', array( 'jquery' ), '1.0', true );
 		}
 			
-		wp_enqueue_script( 'wp-easter-egg', self::$url . 'wp-easter-egg.js', array( 'jquery' ), self::VERSION, true );
+		wp_enqueue_script( 'wp-easter-egg', self::$url . 'wp-easter-egg.js', array( 'jquery' ), WP_EASTER_EGG_VERSION, true );
 		wp_localize_script( 'wp-easter-egg', 'wpee_config', $this->compile_js_data() );
 	}
 	
 	private function is_allowed_on_post() {
 		global $post;
 		
+		// bail early if filter is off
 		if ( ! self::fetch_option( 'filter' ) || 'off' === self::fetch_option( 'filter' ) ) {
 			return true;
 		}

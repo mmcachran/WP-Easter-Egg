@@ -31,6 +31,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 2.0.1 =
+* Cleanup admin JS
+
 = 2.0.0 =
 * Cleanup JS and filter logic
 * Remove console logs
