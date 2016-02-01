@@ -1,8 +1,8 @@
 <?php
 if( ! class_exists( 'WPEE_Meta_Box' ) ):
 class WPEE_Meta_Box {
-	public function __construct( $wpee ) {
-		$this->wpee = $wpee;
+	public function __construct( $plugin ) {
+		$this->plugin = $plugin;
 	}
 	
 	public function meta_box_add() {
@@ -56,7 +56,7 @@ class WPEE_Meta_Box {
 			$label = $pt_object->labels->singular_name;
 		}
 
-		switch ( wp_easter_egg()->fetch_option( 'filter_type' ) ) {
+		switch ( wp_easter_egg()->fetch_option( 'filter' ) ) {
 			case 'inclusive':
 				$label = sprintf( __( 'Allow Easter Egg on this %s', 'wp_easter_egg' ), $label );
 				break;

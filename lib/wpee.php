@@ -55,9 +55,6 @@ class WP_Easter_Egg {
 		self::$url  = trailingslashit( plugin_dir_url( __FILE__ ) );
 		self::$path = trailingslashit( dirname( __FILE__ ) );
 		self::$name = __( 'WP Easter Egg', 'wp_easter_egg' );
-		
-		// Set the options
-		self::$options = get_option( 'wp_easter_egg_settings' );
 
 		add_action( 'init', array( $this, 'init' ) );
 
@@ -69,7 +66,7 @@ class WP_Easter_Egg {
 		add_action( 'admin_init', array( $this->settings(), 'settings_init' ) );
 		
 		// create meta box for posts
-		if ( 'off' !==  self::fetch_option( 'filter' ) && false != self::fetch_option( 'filter' ) ) {
+		if ( self::fetch_option( 'filter' ) && ! ( 'off' ==  self::fetch_option( 'filter' ) ) ) {
 			add_action( 'add_meta_boxes', array( $this->meta_box(), 'meta_box_add' ) );
 			add_action( 'save_post', array( $this->meta_box(), 'meta_box_save' ) );
 		}
@@ -122,6 +119,9 @@ class WP_Easter_Egg {
 		wp_localize_script( 'wp-easter-egg', 'wpee_config', $this->compile_js_data() );
 	}
 	
+	/**
+	 * Determine if Easter Egg is allowed on the post
+	 */
 	private function is_allowed_on_post() {
 		global $post;
 		
@@ -149,6 +149,10 @@ class WP_Easter_Egg {
 		}
 	}
 	
+	/**
+	 * Compile l10n config for front-end
+	 * @return array configuration for front-end
+	 */
 	private function compile_js_data() {
 		$js_data = array(
 			'type' => self::fetch_option( 'type' ),
@@ -170,7 +174,7 @@ class WP_Easter_Egg {
 	* @param  string $key Key to get from the wp_easter_egg_settings option array.
 	* @return string Returns the value of the key or false on failure.
 	*/
-	public static function fetch_option( $key ) {
+	public function fetch_option( $key ) {
 		// Are options already set?
 		if( empty( self::$options ) ) {
 			self::$options = get_option( 'wp_easter_egg_settings' );

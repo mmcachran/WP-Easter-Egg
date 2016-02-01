@@ -31,6 +31,10 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 2.0.4 =
+* Cleanup
+* Fix inclusive/exclusive filter
+
 = 2.0.3 =
 * Update filter description
 
