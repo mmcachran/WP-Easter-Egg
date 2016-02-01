@@ -7,7 +7,7 @@
  * Plugin Name:       WP Easter Egg
  * Plugin URI:        
  * Description:       Add an Easter Egg to your site
- * Version:           1.0.7
+ * Version:           2.0.0
  * Author:            mmcachran
  * Text Domain:       wp_easter_egg
  * License:           GPL-2.0+

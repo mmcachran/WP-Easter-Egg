@@ -2,7 +2,7 @@
 Contributors: mmcachran
 Tags: easteregg, konami, cornify, raptorize, 
 Requires at least: 3.8
-Tested up to: 4.1
+Tested up to: 4.4.1
 Stable tag: trunk
 
 Easily add Easter Eggs to your WordPress site using the Konami code or a custom key sequence.
@@ -30,6 +30,10 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 After activation, you should see a new option in your "Settings" menu for "WP Easter Egg" where you can configure this plugin's settings.
 
 == Changelog ==
+
+= 2.0.0 =
+* Cleanup JS and filter logic
+* Remove console logs
 
 = 1.0.7 =
 * Fix JS error in media library on settings page

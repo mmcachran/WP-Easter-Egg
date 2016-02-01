@@ -112,14 +112,17 @@ class WP_Easter_Egg {
 	 * Add JS to head
 	 */
 	public function do_easter_egg() {
-		if ( $this->is_allowed_on_post() ) {
-			if( 'raptorize' === self::fetch_option( 'action' ) ) {
-				wp_enqueue_script( 'raptorize', self::$url .'raptorize/jquery.raptorize.1.0.js', array( 'jquery' ), self::VERSION, true );
-			}
-			
-			wp_enqueue_script( 'wp-easter-egg', self::$url . 'wp-easter-egg.js', array( 'jquery' ), self::VERSION, true );
-			wp_localize_script( 'wp-easter-egg', 'wpee_config', $this->compile_js_data() );
+		// bail early if not allowed on post
+		if ( ! $this->is_allowed_on_post() ) {
+			return;
 		}
+			
+		if( 'raptorize' === self::fetch_option( 'action' ) ) {
+			wp_enqueue_script( 'raptorize', self::$url .'raptorize/jquery.raptorize.1.0.js', array( 'jquery' ), self::VERSION, true );
+		}
+			
+		wp_enqueue_script( 'wp-easter-egg', self::$url . 'wp-easter-egg.js', array( 'jquery' ), self::VERSION, true );
+		wp_localize_script( 'wp-easter-egg', 'wpee_config', $this->compile_js_data() );
 	}
 	
 	private function is_allowed_on_post() {
