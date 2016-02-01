@@ -31,6 +31,9 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 
 == Changelog ==
 
+= 2.0.5 =
+* Allow backspace in keycode helper
+
 = 2.0.4 =
 * Cleanup
 * Fix inclusive/exclusive filter
