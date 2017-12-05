@@ -1,4 +1,10 @@
 <?php
+/**
+ * Class to handle options for the Easter Egg.
+ *
+ * @package WP Easter Egg
+ */
+
 if( ! class_exists( 'WP_Easter_Egg_Options' ) ):
 class WP_Easter_Egg_Options {
 
