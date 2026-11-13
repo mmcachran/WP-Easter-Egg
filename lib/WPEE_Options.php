@@ -13,6 +13,14 @@ namespace WP_Easter_Egg;
 class Options {
 
 	/**
+	 * Option name used for storing settings.
+	 *
+	 * @since 3.0.0
+	 * @var   string
+	 */
+	const OPTION_NAME = 'wp_easter_egg_settings';
+
+	/**
 	 * Plugin instance.
 	 *
 	 * @since 3.0.0
@@ -202,10 +210,13 @@ class Options {
 	 */
 	protected function sanitize_keycode( $code ) {
 		$code = trim( $code );
-		$parts = array_map( 'intval', explode( ',', $code ) );
+		$parts = explode( ',', $code );
 		$parts = array_filter( $parts, function( $part ) {
-			return $part >= 0 && $part <= 255;
+			return is_numeric( trim( $part ) ) && ( int ) trim( $part ) >= 0 && ( int ) trim( $part ) <= 255;
 		} );
+		$parts = array_map( function( $part ) {
+			return ( int ) trim( $part );
+		}, $parts );
 
 		return implode( ',', $parts );
 	}

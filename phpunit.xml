@@ -10,16 +10,16 @@
             <directory>tests/phpunit</directory>
         </testsuite>
     </testsuites>
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+    <coverage>
+        <include>
             <directory suffix=".php">lib</directory>
-            <exclude>
-                <directory>lib/raptorize</directory>
-            </exclude>
-        </whitelist>
-    </filter>
+        </include>
+        <exclude>
+            <directory>lib/raptorize</directory>
+        </exclude>
+    </coverage>
     <logging>
-        <junit outputDir="build/logs" type="junit"/>
+        <junit outputFile="build/logs/junit.xml"/>
     </logging>
     <php>
         <ini name="error_reporting" value="-1"/>

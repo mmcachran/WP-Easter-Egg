@@ -110,6 +110,7 @@ class Frontend {
 			'action'      => $this->plugin->fetch_option( 'action' ),
 			'custom_js'   => $this->plugin->fetch_option( 'custom_js' ),
 			'image'       => $this->plugin->fetch_option( 'image' ),
+			'raptor_path' => $this->plugin->get_url() . 'raptorize/',
 		);
 	}
 }

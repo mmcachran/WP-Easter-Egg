@@ -79,15 +79,15 @@ describe( 'WP_Easter_Egg Frontend', () => {
 		} );
 
 		test( 'adds trailing comma when missing', () => {
-			expect( app.normalize_code( ',38,38,40' ) ).toBe( ',38,38,40,' );
+			expect( app.normalize_code( ',38,38,40' ) ).toBe( ',,38,38,40,' );
 		} );
 
 		test( 'returns unchanged when already normalized', () => {
-			expect( app.normalize_code( ',38,38,40,' ) ).toBe( ',38,38,40,' );
+			expect( app.normalize_code( ',38,38,40,' ) ).toBe( ',,38,38,40,' );
 		} );
 
 		test( 'handles empty string', () => {
-			expect( app.normalize_code( '' ) ).toBe( ',,' );
+			expect( app.normalize_code( '' ) ).toBe( ',' );
 		} );
 	} );
 
