@@ -1,9 +1,10 @@
 === WP Easter Egg ===
 Contributors: mmcachran
-Tags: easteregg, konami, cornify, raptorize, 
-Requires at least: 3.8
-Tested up to: 4.5.3
-Stable tag: trunk
+Tags: easteregg, konami, cornify, raptorize, fun
+Requires at least: 5.0
+Tested up to: 6.5
+Stable tag: 3.0.0
+Requires PHP: 7.4
 
 Easily add Easter Eggs to your WordPress site using the Konami code or a custom key sequence.
 
@@ -17,19 +18,37 @@ Currently includes options for:
 * Move an image across the user's screen (bottom, middle, or top)
 * Fire custom JS
 
-If you have the "Activate keycode helper" checkbox checked, the custom keycode will fill based on the JS keyCode.  
+If you have the "Activate keycode helper" checkbox checked, the custom keycode will fill based on the JS keyCode.
 
-The filter can be configured to be allowed or not allowed on certain pages via the settings page.
+The filter settings can be configured in the plugin's settings and will either be inclusive or exclusive. If the filter is exclusive, the Easter Egg will not be available on posts where the "Add to filter?" meta checkbox is checked. If the filter is inclusive, the Easter Egg will not be available on posts where the "Add to filter?" meta checkbox is not checked.
 
 == Installation ==
 
-Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
+1. Extract the zip file and drop the contents in the wp-content/plugins/ directory of your WordPress installation.
+2. Activate the plugin from the Plugins page in WordPress admin.
+3. Navigate to Settings > WP Easter Egg to configure your Easter Egg options.
 
 == Usage ==
 
 After activation, you should see a new option in your "Settings" menu for "WP Easter Egg" where you can configure this plugin's settings.
 
 == Changelog ==
+
+= 3.0.0 =
+* Major refactor: abstracted logic into separate classes (Plugin, Options, Meta_Box, Frontend)
+* Added PSR-4 autoloading via Composer
+* Added input sanitization for all settings
+* Added nonce verification for meta box saves
+* Removed eval() from JavaScript, replaced with Function constructor
+* Modernized JavaScript to ES6+ standards
+* Fixed hardcoded paths in raptorize.js
+* Added PHPUnit test suite with 40+ test cases
+* Added Jest JavaScript unit tests
+* Added Cypress e2e tests for user workflows
+* Added GitHub Actions CI/CD pipeline
+* Updated WordPress compatibility to 6.5
+* Updated PHP requirement to 7.4+
+* Added comprehensive documentation and wiki
 
 = 2.0.6 =
 * Update keycode checker to be more specific and avoid fuzzy matches
