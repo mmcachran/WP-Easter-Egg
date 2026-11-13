@@ -176,4 +176,4 @@ For support, please create an issue on the GitHub repository or check the wiki f
 
 == License ==
 
-This plugin is released under the GPL-2.0+ license.
+This plugin is released under the MIT license.

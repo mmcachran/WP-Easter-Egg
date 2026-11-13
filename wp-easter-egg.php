@@ -2,16 +2,16 @@
 /**
  * @package   WP Easter Egg
  * @author    mmcachran
- * @license   GPL-2.0+
+ * @license   MIT
  *
  * Plugin Name:       WP Easter Egg
- * Plugin URI:        
+ * Plugin URI:
  * Description:       Add an Easter Egg to your WordPress site using the Konami code or a custom key sequence.
  * Version:           3.0.0
  * Author:            mmcachran
  * Text Domain:       wp_easter_egg
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           MIT
+ * License URI:       https://opensource.org/licenses/MIT
  * Domain Path:       /languages
  * Requires at least: 5.0
  * Requires PHP:      7.4

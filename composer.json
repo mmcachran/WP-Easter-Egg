@@ -2,7 +2,7 @@
 	"name": "mmcachran/wp-easter-egg",
 	"description": "Add Easter Eggs to your WordPress site using the Konami code or a custom key sequence.",
 	"type": "wordpress-plugin",
-	"license": "GPL-2.0+",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "mmcachran",

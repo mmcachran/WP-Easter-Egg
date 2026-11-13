@@ -122,3 +122,7 @@ After activation, you should see a new option in your "Settings" menu for "WP Ea
 = 0.2.0 =
 * Add support for media library on settings page
 * Add option to move image across screen
+
+== License ==
+
+This plugin is released under the MIT license.
