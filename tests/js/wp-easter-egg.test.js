@@ -64,10 +64,10 @@ describe( 'WP_Easter_Egg Frontend', () => {
 			app.cache = function() { app.$ = {}; };
 			app.bind_keydown = function() {};
 			app.normalize_code = function( string ) {
-				if ( ',' !== string.slice( 1 ) ) {
+				if ( ',' !== string.charAt( 0 ) ) {
 					string = ',' + string;
 				}
-				if ( ',' !== string.slice( -1 ) ) {
+				if ( ',' !== string.charAt( string.length - 1 ) ) {
 					string += ',';
 				}
 				return string;
@@ -79,11 +79,11 @@ describe( 'WP_Easter_Egg Frontend', () => {
 		} );
 
 		test( 'adds trailing comma when missing', () => {
-			expect( app.normalize_code( ',38,38,40' ) ).toBe( ',,38,38,40,' );
+			expect( app.normalize_code( ',38,38,40' ) ).toBe( ',38,38,40,' );
 		} );
 
 		test( 'returns unchanged when already normalized', () => {
-			expect( app.normalize_code( ',38,38,40,' ) ).toBe( ',,38,38,40,' );
+			expect( app.normalize_code( ',38,38,40,' ) ).toBe( ',38,38,40,' );
 		} );
 
 		test( 'handles empty string', () => {
