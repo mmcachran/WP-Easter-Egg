@@ -18,12 +18,12 @@ class WPEE_PluginTest extends TestCase {
 	}
 
 	public function test_version_constant() {
-		$this->assertEquals( '3.0.0', Plugin::VERSION );
+		$this->assertEquals( '3.1.0', Plugin::VERSION );
 	}
 
 	public function test_get_version() {
 		$plugin = Plugin::get_instance();
-		$this->assertEquals( '3.0.0', $plugin->get_version() );
+		$this->assertEquals( '3.1.0', $plugin->get_version() );
 	}
 
 	public function test_get_name() {

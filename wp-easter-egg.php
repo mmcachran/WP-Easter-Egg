@@ -7,7 +7,7 @@
  * Plugin Name:       WP Easter Egg
  * Plugin URI:
  * Description:       Add an Easter Egg to your WordPress site using the Konami code or a custom key sequence.
- * Version:           3.0.0
+ * Version:           3.1.0
  * Author:            mmcachran
  * Text Domain:       wp_easter_egg
  * License:           MIT
@@ -23,7 +23,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Define the version.
-define( 'WP_EASTER_EGG_VERSION', '3.0.0' );
+define( 'WP_EASTER_EGG_VERSION', '3.1.0' );
 
 // Are we in DEV mode?
 if ( ! defined( 'WP_EASTER_EGG' ) ) {

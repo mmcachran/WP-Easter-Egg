@@ -26,7 +26,7 @@ The main plugin class. Implements the singleton pattern.
 
 ```php
 $plugin = \WP_Easter_Egg\Plugin::get_instance();
-$plugin->get_version();      // Returns '3.0.0'
+$plugin->get_version();      // Returns '3.1.0'
 $plugin->get_name();         // Returns plugin name
 $plugin->get_url();          // Returns plugin URL
 $plugin->get_path();         // Returns plugin path

@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @extends IteratorIterator<mixed, mixed, \Iterator<mixed>>
+ */
+class WP_Map_Iterator extends IteratorIterator {
+	/**
+	 * @var callable
+	 */
+	private $callback;
+
+	/**
+	 * @param \Iterator $iterator
+	 * @param callable $callback
+	 */
+	public function __construct( $iterator, $callback ) {
+		$this->callback = $callback;
+		parent::__construct( $iterator );
+	}
+
+	#[\ReturnTypeWillChange]
+	public function current() {
+		$original_current = parent::current();
+		return call_user_func( $this->callback, $original_current );
+	}
+}

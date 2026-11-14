@@ -25,7 +25,7 @@ Main plugin class implementing the singleton pattern.
 
 | Constant | Value | Description |
 |----------|-------|-------------|
-| `VERSION` | `'3.0.0'` | Plugin version |
+| `VERSION` | `'3.1.0'` | Plugin version |
 | `OPTION_NAME` | `'wp_easter_egg_settings'` | Option name for settings |
 
 ### WP_Easter_Egg\Options
@@ -119,5 +119,5 @@ No custom actions are currently defined.
 
 | Constant | Value | Description |
 |----------|-------|-------------|
-| `WP_EASTER_EGG_VERSION` | `'3.0.0'` | Plugin version (defined in main file) |
+| `WP_EASTER_EGG_VERSION` | `'3.1.0'` | Plugin version (defined in main file) |
 | `WP_EASTER_EGG` | `true` | Development mode flag |
