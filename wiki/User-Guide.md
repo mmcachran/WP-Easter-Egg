@@ -71,6 +71,26 @@ Common JavaScript key codes:
 
 The Konami code is: 38,38,40,40,37,39,37,39,66,65
 
+## Screenshots and Videos
+
+### Screenshots
+
+| # | Description | Location |
+|---|-------------|----------|
+| 1 | WP Easter Egg settings page | `screenshots/settings-page.png` |
+| 2 | Meta box on post edit screen | `screenshots/meta-box.png` |
+| 3 | Easter Egg in action on frontend | `screenshots/frontend-action.png` |
+
+### Demo Videos
+
+| # | Description | Location |
+|---|-------------|----------|
+| 1 | Admin configuration walkthrough | `videos/admin-config.mp4` |
+| 2 | Konami code Easter Egg trigger | `videos/konami-trigger.mp4` |
+| 3 | Filter system demo | `videos/filter-system.mp4` |
+
+> **Note:** Media files are not included in the repository. Capture them from a running WordPress installation with the plugin activated.
+
 ## Tips
 
 * Use the "Activate keycode helper" checkbox to automatically fill key codes as you press keys

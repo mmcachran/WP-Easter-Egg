@@ -59,9 +59,21 @@ The filter system allows you to control which posts display the Easter Egg:
 
 ## Screenshots
 
-1. WP Easter Egg settings page
-2. Meta box on post edit screen
-3. Easter Egg in action on frontend
+| # | Description | Image |
+|---|-------------|-------|
+| 1 | WP Easter Egg settings page | `screenshots/settings-page.png` |
+| 2 | Meta box on post edit screen | `screenshots/meta-box.png` |
+| 3 | Easter Egg in action on frontend | `screenshots/frontend-action.png` |
+
+## Demo Videos
+
+| # | Description | Video |
+|---|-------------|-------|
+| 1 | Admin configuration walkthrough | `videos/admin-config.mp4` |
+| 2 | Konami code Easter Egg trigger | `videos/konami-trigger.mp4` |
+| 3 | Filter system demo | `videos/filter-system.mp4` |
+
+> **Note:** Screenshot and video files are not included in the repository. Capture them from a running WordPress installation with the plugin activated and place them in the `screenshots/` and `videos/` directories respectively.
 
 ## Changelog
 
