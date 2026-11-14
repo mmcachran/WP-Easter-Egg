@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="36" assertions="57" errors="0" warnings="0" failures="0" skipped="0" time="0.010485">
-    <testsuite name="WP Easter Egg Test Suite" tests="36" assertions="57" errors="0" warnings="0" failures="0" skipped="0" time="0.010485">
-      <testsuite name="WP_Easter_Egg\Tests\WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" tests="6" assertions="16" errors="0" warnings="0" failures="0" skipped="0" time="0.006118">
-        <testcase name="test_compile_js_data_returns_all_keys" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="10" assertions="11" time="0.005382">
+  <testsuite name="" tests="36" assertions="57" errors="0" warnings="0" failures="0" skipped="0" time="0.013512">
+    <testsuite name="WP Easter Egg Test Suite" tests="36" assertions="57" errors="0" warnings="0" failures="0" skipped="0" time="0.013512">
+      <testsuite name="WP_Easter_Egg\Tests\WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" tests="6" assertions="16" errors="0" warnings="0" failures="0" skipped="0" time="0.007467">
+        <testcase name="test_compile_js_data_returns_all_keys" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="10" assertions="11" time="0.006624">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php on line 24
 </system-out>
         </testcase>
-        <testcase name="test_is_allowed_on_post_filter_off" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="41" assertions="1" time="0.000252">
+        <testcase name="test_is_allowed_on_post_filter_off" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="41" assertions="1" time="0.000340">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php on line 51
 </system-out>
         </testcase>
-        <testcase name="test_is_allowed_on_post_exclusive_not_added" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="57" assertions="1" time="0.000101">
+        <testcase name="test_is_allowed_on_post_exclusive_not_added" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="57" assertions="1" time="0.000109">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php on line 67
 </system-out>
         </testcase>
-        <testcase name="test_is_allowed_on_post_exclusive_added" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="73" assertions="1" time="0.000202">
+        <testcase name="test_is_allowed_on_post_exclusive_added" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="73" assertions="1" time="0.000215">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php on line 84
 </system-out>
         </testcase>
-        <testcase name="test_is_allowed_on_post_inclusive_added" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="90" assertions="1" time="0.000092">
+        <testcase name="test_is_allowed_on_post_inclusive_added" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="90" assertions="1" time="0.000091">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php on line 101
 </system-out>
         </testcase>
-        <testcase name="test_is_allowed_on_post_inclusive_not_added" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="107" assertions="1" time="0.000088">
+        <testcase name="test_is_allowed_on_post_inclusive_not_added" class="WP_Easter_Egg\Tests\WPEE_FrontendTest" classname="WP_Easter_Egg.Tests.WPEE_FrontendTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php" line="107" assertions="1" time="0.000086">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_FrontendTest.php on line 118
 </system-out>
         </testcase>
       </testsuite>
-      <testsuite name="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" tests="6" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.001139">
-        <testcase name="test_get_filter_label_inclusive" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="10" assertions="1" time="0.000600">
+      <testsuite name="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" tests="6" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.001563">
+        <testcase name="test_get_filter_label_inclusive" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="10" assertions="1" time="0.000995">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php on line 19
 </system-out>
         </testcase>
-        <testcase name="test_get_filter_label_exclusive" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="25" assertions="1" time="0.000095">
+        <testcase name="test_get_filter_label_exclusive" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="25" assertions="1" time="0.000100">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php on line 34
 </system-out>
         </testcase>
-        <testcase name="test_get_filter_label_off" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="40" assertions="1" time="0.000085">
+        <testcase name="test_get_filter_label_off" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="40" assertions="1" time="0.000091">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php on line 49
 </system-out>
         </testcase>
-        <testcase name="test_meta_box_save_bails_on_autosave" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="55" assertions="1" time="0.000071"/>
-        <testcase name="test_meta_box_save_bails_without_nonce" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="74" assertions="1" time="0.000200">
+        <testcase name="test_meta_box_save_bails_on_autosave" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="55" assertions="1" time="0.000070"/>
+        <testcase name="test_meta_box_save_bails_without_nonce" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="74" assertions="1" time="0.000219">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php on line 82
 </system-out>
         </testcase>
-        <testcase name="test_meta_box_save_saves_value" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="88" assertions="1" time="0.000087">
+        <testcase name="test_meta_box_save_saves_value" class="WP_Easter_Egg\Tests\WPEE_MetaBoxTest" classname="WP_Easter_Egg.Tests.WPEE_MetaBoxTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php" line="88" assertions="1" time="0.000088">
           <system-out>
 Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1 in /Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_MetaBoxTest.php on line 99
 </system-out>
         </testcase>
       </testsuite>
-      <testsuite name="WP_Easter_Egg\Tests\WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" tests="8" assertions="17" errors="0" warnings="0" failures="0" skipped="0" time="0.000589">
-        <testcase name="test_sanitize_settings_defaults" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="10" assertions="6" time="0.000098"/>
-        <testcase name="test_sanitize_settings_filter" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="28" assertions="2" time="0.000076"/>
-        <testcase name="test_sanitize_settings_type" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="38" assertions="2" time="0.000070"/>
+      <testsuite name="WP_Easter_Egg\Tests\WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" tests="8" assertions="17" errors="0" warnings="0" failures="0" skipped="0" time="0.000554">
+        <testcase name="test_sanitize_settings_defaults" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="10" assertions="6" time="0.000079"/>
+        <testcase name="test_sanitize_settings_filter" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="28" assertions="2" time="0.000069"/>
+        <testcase name="test_sanitize_settings_type" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="38" assertions="2" time="0.000066"/>
         <testcase name="test_sanitize_settings_action" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="48" assertions="2" time="0.000065"/>
-        <testcase name="test_sanitize_settings_custom_code" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="58" assertions="2" time="0.000085"/>
-        <testcase name="test_sanitize_settings_image" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="68" assertions="1" time="0.000064"/>
+        <testcase name="test_sanitize_settings_custom_code" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="58" assertions="2" time="0.000078"/>
+        <testcase name="test_sanitize_settings_image" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="68" assertions="1" time="0.000066"/>
         <testcase name="test_fetch_option_missing_key" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="75" assertions="1" time="0.000067"/>
-        <testcase name="test_fetch_option_existing_key" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="85" assertions="1" time="0.000065"/>
+        <testcase name="test_fetch_option_existing_key" class="WP_Easter_Egg\Tests\WPEE_OptionsTest" classname="WP_Easter_Egg.Tests.WPEE_OptionsTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_OptionsTest.php" line="85" assertions="1" time="0.000064"/>
       </testsuite>
-      <testsuite name="WP_Easter_Egg\Tests\WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" tests="16" assertions="18" errors="0" warnings="0" failures="0" skipped="0" time="0.002639">
-        <testcase name="test_get_instance_returns_plugin" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="9" assertions="1" time="0.000277"/>
-        <testcase name="test_get_instance_is_singleton" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="14" assertions="1" time="0.000333"/>
-        <testcase name="test_version_constant" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="20" assertions="1" time="0.000074"/>
-        <testcase name="test_get_version" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="24" assertions="1" time="0.000068"/>
-        <testcase name="test_get_name" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="29" assertions="1" time="0.000887"/>
-        <testcase name="test_get_url" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="34" assertions="2" time="0.000342"/>
-        <testcase name="test_get_path" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="40" assertions="2" time="0.000076"/>
-        <testcase name="test_is_filter_enabled_when_off" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="46" assertions="1" time="0.000070"/>
-        <testcase name="test_is_filter_enabled_when_exclusive" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="54" assertions="1" time="0.000066"/>
-        <testcase name="test_is_filter_enabled_when_inclusive" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="62" assertions="1" time="0.000068"/>
-        <testcase name="test_is_filter_enabled_when_not_set" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="70" assertions="1" time="0.000064"/>
-        <testcase name="test_fetch_option_returns_false_for_missing_key" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="78" assertions="1" time="0.000064"/>
-        <testcase name="test_fetch_option_returns_value" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="86" assertions="1" time="0.000063"/>
-        <testcase name="test_get_options" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="94" assertions="1" time="0.000065"/>
-        <testcase name="test_get_meta_box" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="100" assertions="1" time="0.000061"/>
-        <testcase name="test_get_frontend" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="106" assertions="1" time="0.000061"/>
+      <testsuite name="WP_Easter_Egg\Tests\WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" tests="16" assertions="18" errors="0" warnings="0" failures="0" skipped="0" time="0.003928">
+        <testcase name="test_get_instance_returns_plugin" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="9" assertions="1" time="0.000415"/>
+        <testcase name="test_get_instance_is_singleton" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="14" assertions="1" time="0.000501"/>
+        <testcase name="test_version_constant" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="20" assertions="1" time="0.000126"/>
+        <testcase name="test_get_version" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="24" assertions="1" time="0.000089"/>
+        <testcase name="test_get_name" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="29" assertions="1" time="0.001326"/>
+        <testcase name="test_get_url" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="34" assertions="2" time="0.000458"/>
+        <testcase name="test_get_path" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="40" assertions="2" time="0.000143"/>
+        <testcase name="test_is_filter_enabled_when_off" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="46" assertions="1" time="0.000139"/>
+        <testcase name="test_is_filter_enabled_when_exclusive" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="54" assertions="1" time="0.000119"/>
+        <testcase name="test_is_filter_enabled_when_inclusive" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="62" assertions="1" time="0.000097"/>
+        <testcase name="test_is_filter_enabled_when_not_set" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="70" assertions="1" time="0.000101"/>
+        <testcase name="test_fetch_option_returns_false_for_missing_key" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="78" assertions="1" time="0.000094"/>
+        <testcase name="test_fetch_option_returns_value" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="86" assertions="1" time="0.000099"/>
+        <testcase name="test_get_options" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="94" assertions="1" time="0.000087"/>
+        <testcase name="test_get_meta_box" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="100" assertions="1" time="0.000067"/>
+        <testcase name="test_get_frontend" class="WP_Easter_Egg\Tests\WPEE_PluginTest" classname="WP_Easter_Egg.Tests.WPEE_PluginTest" file="/Users/mcachran/Projects/wordpress/WP-Easter-Egg/tests/phpunit/WPEE_PluginTest.php" line="106" assertions="1" time="0.000067"/>
       </testsuite>
     </testsuite>
   </testsuite>
