@@ -151,7 +151,6 @@ class Plugin {
 	 */
 	public function get_options() {
 		if ( null === $this->options ) {
-			require_once( $this->path . 'WPEE_Options.php' );
 			$this->options = new Options( $this );
 		}
 
@@ -167,7 +166,6 @@ class Plugin {
 	 */
 	public function get_meta_box() {
 		if ( null === $this->meta_box ) {
-			require_once( $this->path . 'WPEE_Meta_Box.php' );
 			$this->meta_box = new Meta_Box( $this );
 		}
 
@@ -183,7 +181,6 @@ class Plugin {
 	 */
 	public function get_frontend() {
 		if ( null === $this->frontend ) {
-			require_once( $this->path . 'WPEE_Frontend.php' );
 			$this->frontend = new Frontend( $this );
 		}
 
