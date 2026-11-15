@@ -93,41 +93,37 @@ describe( 'WP_Easter_Egg Frontend', () => {
 
 	describe( 'trigger_action', () => {
 		beforeEach( () => {
-			app.l10n = {};
-			app.rotate_screen = jest.fn();
-			app.cornify = jest.fn();
-			app.raptorize = jest.fn();
-			app.move_image_across = jest.fn();
-			app.execute_custom_js = jest.fn();
-
-			app.trigger_action = function() {
-				switch ( app.l10n.action ) {
-					case 'rotate_screen':
-						app.rotate_screen();
-						break;
-					case 'cornify':
-						app.cornify();
-						break;
-					case 'raptorize':
-						app.raptorize();
-						break;
-					case 'move_image_across_bottom':
-						app.move_image_across( 'bottom' );
-						break;
-					case 'move_image_across_middle':
-						app.move_image_across( 'middle' );
-						break;
-					case 'move_image_across_top':
-						app.move_image_across( 'top' );
-						break;
-					case 'custom_js':
-						app.execute_custom_js();
-						break;
-					default:
-						break;
-				}
-			};
-		} );
+				app.l10n = {};
+				app.rotate_screen = jest.fn();
+				app.cornify = jest.fn();
+				app.raptorize = jest.fn();
+				app.move_image_across = jest.fn();
+	
+				app.trigger_action = function() {
+					switch ( app.l10n.action ) {
+						case 'rotate_screen':
+							app.rotate_screen();
+							break;
+						case 'cornify':
+							app.cornify();
+							break;
+						case 'raptorize':
+							app.raptorize();
+							break;
+						case 'move_image_across_bottom':
+							app.move_image_across( 'bottom' );
+							break;
+						case 'move_image_across_middle':
+							app.move_image_across( 'middle' );
+							break;
+						case 'move_image_across_top':
+							app.move_image_across( 'top' );
+							break;
+						default:
+							break;
+					}
+				};
+			} );
 
 		test( 'calls rotate_screen for rotate_screen action', () => {
 			app.l10n.action = 'rotate_screen';
@@ -163,78 +159,6 @@ describe( 'WP_Easter_Egg Frontend', () => {
 			app.l10n.action = 'move_image_across_top';
 			app.trigger_action();
 			expect( app.move_image_across ).toHaveBeenCalledWith( 'top' );
-		} );
-
-		test( 'calls execute_custom_js for custom_js action', () => {
-			app.l10n.action = 'custom_js';
-			app.trigger_action();
-			expect( app.execute_custom_js ).toHaveBeenCalled();
-		} );
-	} );
-
-	describe( 'execute_custom_js', () => {
-		test( 'executes valid custom JS', () => {
-			app.l10n = { custom_js: 'window.testVar = 42;' };
-			app.execute_custom_js = function() {
-				var custom_js = app.l10n.custom_js || '';
-				if ( ! custom_js ) {
-					return;
-				}
-				try {
-					var fn = new Function( custom_js );
-					fn();
-				} catch ( error ) {
-					if ( window.console && window.console.error ) {
-						window.console.error( 'WP Easter Egg: Custom JS error - ' + error.message );
-					}
-				}
-			};
-
-			app.execute_custom_js();
-			expect( window.testVar ).toBe( 42 );
-		} );
-
-		test( 'handles empty custom JS gracefully', () => {
-			app.l10n = { custom_js: '' };
-			app.execute_custom_js = function() {
-				var custom_js = app.l10n.custom_js || '';
-				if ( ! custom_js ) {
-					return;
-				}
-				try {
-					var fn = new Function( custom_js );
-					fn();
-				} catch ( error ) {
-					if ( window.console && window.console.error ) {
-						window.console.error( 'WP Easter Egg: Custom JS error - ' + error.message );
-					}
-				}
-			};
-
-			expect( () => app.execute_custom_js() ).not.toThrow();
-		} );
-
-		test( 'catches errors in custom JS', () => {
-			app.l10n = { custom_js: 'this will cause an error(' };
-			app.execute_custom_js = function() {
-				var custom_js = app.l10n.custom_js || '';
-				if ( ! custom_js ) {
-					return;
-				}
-				try {
-					var fn = new Function( custom_js );
-					fn();
-				} catch ( error ) {
-					if ( window.console && window.console.error ) {
-						window.console.error( 'WP Easter Egg: Custom JS error - ' + error.message );
-					}
-				}
-			};
-
-			const spy = jest.spyOn( window.console, 'error' ).mockImplementation();
-			app.execute_custom_js();
-			expect( spy ).toHaveBeenCalled();
-			spy.mockRestore();
 		} );
 	} );
 
