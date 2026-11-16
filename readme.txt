@@ -3,7 +3,7 @@ Contributors: mmcachran, topta.co
 Tags: easteregg, konami, cornify, raptorize, fun
 Requires at least: 5.0
 Tested up to: 6.5
-Stable tag: 3.4.0
+Stable tag: 3.4.1
 Requires PHP: 7.4
 
 Easily add Easter Eggs to your WordPress site using the Konami code or a custom key sequence.
@@ -33,6 +33,11 @@ The filter settings can be configured in the plugin's settings and will either b
 After activation, you should see a new option in your "Settings" menu for "WP Easter Egg" where you can configure this plugin's settings.
 
 == Changelog ==
+
+= 3.4.1 =
+* Bump version to 3.4.1
+* Fix PHP 8.5 deprecation warnings in test suite (removed deprecated setAccessible calls)
+* Update test assertions for version 3.4.1
 
 = 3.4.0 =
 * Bump version to 3.4.0

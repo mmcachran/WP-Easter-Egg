@@ -16,7 +16,6 @@ class WPEE_MetaBoxTest extends TestCase {
 		$meta_box = $plugin->get_meta_box();
 
 		$reflection = new \ReflectionMethod( $meta_box, 'get_filter_label' );
-		$reflection->setAccessible( true );
 		$label = $reflection->invoke( $meta_box );
 
 		$this->assertStringContainsString( 'Allow Easter Egg', $label );
@@ -31,7 +30,6 @@ class WPEE_MetaBoxTest extends TestCase {
 		$meta_box = $plugin->get_meta_box();
 
 		$reflection = new \ReflectionMethod( $meta_box, 'get_filter_label' );
-		$reflection->setAccessible( true );
 		$label = $reflection->invoke( $meta_box );
 
 		$this->assertStringContainsString( 'Do NOT allow Easter Egg', $label );
@@ -46,7 +44,6 @@ class WPEE_MetaBoxTest extends TestCase {
 		$meta_box = $plugin->get_meta_box();
 
 		$reflection = new \ReflectionMethod( $meta_box, 'get_filter_label' );
-		$reflection->setAccessible( true );
 		$label = $reflection->invoke( $meta_box );
 
 		$this->assertStringContainsString( 'Do NOT allow Easter Egg', $label );
@@ -65,7 +62,6 @@ class WPEE_MetaBoxTest extends TestCase {
 		$meta_box = $plugin->get_meta_box();
 
 		$reflection = new \ReflectionMethod( $meta_box, 'meta_box_save' );
-		$reflection->setAccessible( true );
 		$result = $reflection->invoke( $meta_box, 1 );
 
 		$this->assertNull( $result );
@@ -79,7 +75,6 @@ class WPEE_MetaBoxTest extends TestCase {
 		$meta_box = $plugin->get_meta_box();
 
 		$reflection = new \ReflectionMethod( $meta_box, 'meta_box_save' );
-		$reflection->setAccessible( true );
 		$result = $reflection->invoke( $meta_box, 1 );
 
 		$this->assertNull( $result );
@@ -96,7 +91,6 @@ class WPEE_MetaBoxTest extends TestCase {
 		$meta_box = $plugin->get_meta_box();
 
 		$reflection = new \ReflectionMethod( $meta_box, 'meta_box_save' );
-		$reflection->setAccessible( true );
 		$reflection->invoke( $meta_box, 1 );
 
 		$this->assertEquals( 'on', $wp_post_meta[1]['_wpee_added_to_filter'] );

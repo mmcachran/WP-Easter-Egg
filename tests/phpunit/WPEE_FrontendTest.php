@@ -21,7 +21,6 @@ class WPEE_FrontendTest extends TestCase {
 		$frontend = $plugin->get_frontend();
 
 		$reflection = new \ReflectionMethod( $frontend, 'compile_js_data' );
-		$reflection->setAccessible( true );
 		$data = $reflection->invoke( $frontend );
 
 		$this->assertArrayHasKey( 'type', $data );
@@ -48,7 +47,6 @@ class WPEE_FrontendTest extends TestCase {
 		$frontend = $plugin->get_frontend();
 
 		$reflection = new \ReflectionMethod( $frontend, 'is_allowed_on_post' );
-		$reflection->setAccessible( true );
 		$result = $reflection->invoke( $frontend );
 
 		$this->assertTrue( $result );
@@ -64,7 +62,6 @@ class WPEE_FrontendTest extends TestCase {
 		$frontend = $plugin->get_frontend();
 
 		$reflection = new \ReflectionMethod( $frontend, 'is_allowed_on_post' );
-		$reflection->setAccessible( true );
 		$result = $reflection->invoke( $frontend );
 
 		$this->assertTrue( $result );
@@ -81,7 +78,6 @@ class WPEE_FrontendTest extends TestCase {
 		$frontend = $plugin->get_frontend();
 
 		$reflection = new \ReflectionMethod( $frontend, 'is_allowed_on_post' );
-		$reflection->setAccessible( true );
 		$result = $reflection->invoke( $frontend );
 
 		$this->assertFalse( $result );
@@ -98,7 +94,6 @@ class WPEE_FrontendTest extends TestCase {
 		$frontend = $plugin->get_frontend();
 
 		$reflection = new \ReflectionMethod( $frontend, 'is_allowed_on_post' );
-		$reflection->setAccessible( true );
 		$result = $reflection->invoke( $frontend );
 
 		$this->assertTrue( $result );
@@ -115,7 +110,6 @@ class WPEE_FrontendTest extends TestCase {
 		$frontend = $plugin->get_frontend();
 
 		$reflection = new \ReflectionMethod( $frontend, 'is_allowed_on_post' );
-		$reflection->setAccessible( true );
 		$result = $reflection->invoke( $frontend );
 
 		$this->assertFalse( $result );
