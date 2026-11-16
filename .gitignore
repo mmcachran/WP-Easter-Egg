@@ -1,0 +1,28 @@
+# Composer dependencies
+vendor/
+
+# Build and coverage output
+build/
+
+# PHPUnit cache
+.phpunit.result.cache
+
+# Node.js dependencies
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Log files
+*.log
+
+# Composer temporary files
+composer.lock.bak

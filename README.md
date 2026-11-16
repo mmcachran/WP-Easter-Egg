@@ -1,9 +1,9 @@
 === WP Easter Egg ===
-Contributors: mmcachran
+Contributors: mmcachran, topta.co
 Tags: easteregg, konami, cornify, raptorize, fun
 Requires at least: 5.0
 Tested up to: 6.5
-Stable tag: 3.1.0
+Stable tag: 3.4.0
 Requires PHP: 7.4
 
 ## Description
@@ -76,6 +76,14 @@ The filter system allows you to control which posts display the Easter Egg:
 > **Note:** Screenshot and video files are not included in the repository. Capture them from a running WordPress installation with the plugin activated and place them in the `screenshots/` and `videos/` directories respectively.
 
 ## Changelog
+
+### 3.4.0
+* Bump version to 3.4.0
+* Add topta.co author byline
+* Enhance Composer autoloader optimization (classmap-authoritative, prefer-dist)
+* Add WordPress installer paths and wp-cli scripts
+* Add roave/security-advisories for vulnerability scanning
+* Update .gitignore to exclude vendor, build, and cache directories
 
 ### 3.1.0
 * Bump minor version to 3.1.0

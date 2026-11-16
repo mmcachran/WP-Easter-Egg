@@ -2,13 +2,15 @@
 /**
  * @package   WP Easter Egg
  * @author    mmcachran
+ * @author    topta.co
  * @license   MIT
  *
  * Plugin Name:       WP Easter Egg
- * Plugin URI:
+ * Plugin URI:        https://toptaco.co
  * Description:       Add an Easter Egg to your WordPress site using the Konami code or a custom key sequence.
- * Version:           3.3.0
+ * Version:           3.4.0
  * Author:            mmcachran
+ * Author URI:        https://toptaco.co
  * Text Domain:       wp_easter_egg
  * License:           MIT
  * License URI:       https://opensource.org/licenses/MIT
@@ -23,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Define the version.
-define( 'WP_EASTER_EGG_VERSION', '3.3.0' );
+define( 'WP_EASTER_EGG_VERSION', '3.4.0' );
 
 // Are we in DEV mode?
 if ( ! defined( 'WP_EASTER_EGG' ) ) {
