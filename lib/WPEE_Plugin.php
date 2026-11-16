@@ -18,7 +18,7 @@ class Plugin {
 	 * @since 3.0.0
 	 * @var   string
 	 */
-	const VERSION = '3.4.1';
+	const VERSION = '4.0.0';
 
 	/**
 	 * Option name used for storing settings.

@@ -40,20 +40,10 @@ class Frontend {
 			return;
 		}
 
-		if ( 'raptorize' === $this->plugin->fetch_option( 'action' ) ) {
-			wp_enqueue_script(
-				'raptorize',
-				$this->plugin->get_url() . 'raptorize/jquery.raptorize.1.0.js',
-				array( 'jquery' ),
-				'1.0',
-				true
-			);
-		}
-
 		wp_enqueue_script(
 			'wp-easter-egg',
 			$this->plugin->get_url() . 'wp-easter-egg.js',
-			array( 'jquery' ),
+			array(),
 			WP_EASTER_EGG_VERSION,
 			true
 		);

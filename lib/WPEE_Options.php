@@ -76,7 +76,7 @@ class Options {
 			wp_enqueue_script(
 				'wp-easter-egg-admin',
 				plugins_url( '/wp-easter-egg-admin.js', __FILE__ ),
-				array( 'jquery' ),
+				array(),
 				WP_EASTER_EGG_VERSION,
 				true
 			);

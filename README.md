@@ -3,7 +3,7 @@ Contributors: mmcachran, topta.co
 Tags: easteregg, konami, cornify, raptorize, fun
 Requires at least: 5.0
 Tested up to: 6.5
-Stable tag: 3.4.1
+Stable tag: 4.0.0
 Requires PHP: 7.4
 
 ## Description
@@ -76,6 +76,13 @@ The filter system allows you to control which posts display the Easter Egg:
 > **Note:** Screenshot and video files are not included in the repository. Capture them from a running WordPress installation with the plugin activated and place them in the `screenshots/` and `videos/` directories respectively.
 
 ## Changelog
+
+### 4.0.0
+* Major: Removed jQuery dependency from all JavaScript (frontend and admin)
+* Replaced jQuery raptorize plugin with vanilla JS equivalent
+* Replaced $.getScript with dynamic script injection for Cornify
+* Replaced jQuery DOM manipulation with vanilla JS throughout
+* Smaller footprint, faster loading, no external JS dependency
 
 ### 3.4.1
 * Bump version to 3.4.1

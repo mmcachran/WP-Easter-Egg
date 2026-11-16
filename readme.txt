@@ -3,7 +3,7 @@ Contributors: mmcachran, topta.co
 Tags: easteregg, konami, cornify, raptorize, fun
 Requires at least: 5.0
 Tested up to: 6.5
-Stable tag: 3.4.1
+Stable tag: 4.0.0
 Requires PHP: 7.4
 
 Easily add Easter Eggs to your WordPress site using the Konami code or a custom key sequence.
@@ -33,6 +33,13 @@ The filter settings can be configured in the plugin's settings and will either b
 After activation, you should see a new option in your "Settings" menu for "WP Easter Egg" where you can configure this plugin's settings.
 
 == Changelog ==
+
+= 4.0.0 =
+* Major: Removed jQuery dependency from all JavaScript (frontend and admin)
+* Replaced jQuery raptorize plugin with vanilla JS equivalent
+* Replaced $.getScript with dynamic script injection for Cornify
+* Replaced jQuery DOM manipulation with vanilla JS throughout
+* Smaller footprint, faster loading, no external JS dependency
 
 = 3.4.1 =
 * Bump version to 3.4.1
