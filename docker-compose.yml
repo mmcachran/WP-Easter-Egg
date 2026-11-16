@@ -1,0 +1,144 @@
+version: "3.8"
+
+services:
+  # ============================================
+  # PHP 7.4 + WordPress 5.0 (Minimum supported)
+  # ============================================
+  wp-5.0-php7.4:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PHP_VERSION: "7.4"
+        WORDPRESS_VERSION: "5.0"
+    container_name: wpee-wp50-php74
+    ports:
+      - "8074:80"
+    volumes:
+      - ./tests:/var/www/html/wp-content/plugins/wp-easter-egg/tests:ro
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+    depends_on:
+      - db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ============================================
+  # PHP 8.0 + WordPress 5.8
+  # ============================================
+  wp-5.8-php8.0:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PHP_VERSION: "8.0"
+        WORDPRESS_VERSION: "5.8"
+    container_name: wpee-wp58-php80
+    ports:
+      - "8080:80"
+    volumes:
+      - ./tests:/var/www/html/wp-content/plugins/wp-easter-egg/tests:ro
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+    depends_on:
+      - db
+
+  # ============================================
+  # PHP 8.1 + WordPress 6.0
+  # ============================================
+  wp-6.0-php8.1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PHP_VERSION: "8.1"
+        WORDPRESS_VERSION: "6.0"
+    container_name: wpee-wp60-php81
+    ports:
+      - "8081:80"
+    volumes:
+      - ./tests:/var/www/html/wp-content/plugins/wp-easter-egg/tests:ro
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+    depends_on:
+      - db
+
+  # ============================================
+  # PHP 8.2 + WordPress 6.5 (Recommended)
+  # ============================================
+  wp-6.5-php8.2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PHP_VERSION: "8.2"
+        WORDPRESS_VERSION: "6.5"
+    container_name: wpee-wp65-php82
+    ports:
+      - "8082:80"
+    volumes:
+      - ./tests:/var/www/html/wp-content/plugins/wp-easter-egg/tests:ro
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+    depends_on:
+      - db
+
+  # ============================================
+  # PHP 8.3 + WordPress latest (Edge)
+  # ============================================
+  wp-latest-php8.3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PHP_VERSION: "8.3"
+        WORDPRESS_VERSION: "latest"
+    container_name: wpee-wplatest-php83
+    ports:
+      - "8083:80"
+    volumes:
+      - ./tests:/var/www/html/wp-content/plugins/wp-easter-egg/tests:ro
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=wordpress
+      - WORDPRESS_DB_PASSWORD=wordpress
+      - WORDPRESS_DB_NAME=wordpress
+    depends_on:
+      - db
+
+  # ============================================
+  # Database (MariaDB)
+  # ============================================
+  db:
+    image: mariadb:10.6
+    container_name: wpee-db
+    environment:
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_USER=wordpress
+      - MYSQL_PASSWORD=wordpress
+      - MYSQL_ROOT_PASSWORD=rootpassword
+    volumes:
+      - wordpress_db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  wordpress_db_data:

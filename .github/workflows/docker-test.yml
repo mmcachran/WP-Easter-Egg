@@ -1,0 +1,44 @@
+name: Docker Cross-Version Tests
+
+on:
+  push:
+    branches: [ master, main, develop ]
+  pull_request:
+    branches: [ master, main, develop ]
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 02:00 UTC
+
+jobs:
+  docker-matrix:
+    name: PHP ${{ matrix.php-version }} + WordPress ${{ matrix.wp-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Minimum supported
+          - php-version: "7.4"
+            wp-version: "5.0"
+          - php-version: "8.0"
+            wp-version: "5.8"
+          - php-version: "8.1"
+            wp-version: "6.0"
+          # Recommended
+          - php-version: "8.2"
+            wp-version: "6.5"
+          # Edge
+          - php-version: "8.3"
+            wp-version: "latest"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Run Docker cross-version tests
+        run: |
+          PHP_VERSION=${{ matrix.php-version }} \
+          WORDPRESS_VERSION=${{ matrix.wp-version }} \
+          bash scripts/docker-test.sh
